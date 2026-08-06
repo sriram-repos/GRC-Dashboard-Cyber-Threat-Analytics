@@ -6,7 +6,7 @@ A high-performance Governance, Risk, and Compliance (GRC) data engineering and a
 
 ## 📌 Executive Summary
 
-Modern Security Operations Centers (SOCs) and GRC teams require actionable, aggregated risk metrics rather than millions of raw log entries. This project implements a full database transformation pipeline on the **CIC-IDS2018 dataset**[cite: 1], engineering a **12,000x data compression ratio** (reducing 3.6 million raw rows to ~300 aggregated materialized records)[cite: 1] to deliver instantaneous Power BI dashboard performance without sacrificing threat governance granularity.
+Modern Security Operations Centers (SOCs) and GRC teams require actionable, aggregated risk metrics rather than millions of raw log entries. This project implements a full database transformation pipeline on the **CIC-IDS2018 dataset**[cite: 1], engineering a **3,000x data compression ratio** (reducing 3.6 million raw rows to ~110,00 aggregated materialized records)[cite: 1] to deliver instantaneous Power BI dashboard performance without sacrificing threat governance granularity.
 
 ---
 
@@ -25,7 +25,7 @@ Modern Security Operations Centers (SOCs) and GRC teams require actionable, aggr
    * `Dim_Date`, `Dim_Port`, `Dim_Protocol`, `Dim_Ip_Loc`[cite: 1]
    * `Dim_NIST`: Maps specific attack signatures directly to NIST CSF controls[cite: 1].
 4. **Fact Summarization**: Built a summarized fact table containing core volumetric metrics (`Total_Network_Flows`, `Total_Attack_Flows`) grouped by hour, IPs, and protocol identifiers[cite: 1].
-5. **Performance Optimization**: Created a materialized view joining the star schema, compressing **3.6 million raw flow records down to approximately 300 performance-optimized rows**[cite: 1].
+5. **Performance Optimization**: Created a materialized view joining the star schema, compressing **3.6 million raw flow records down to approximately 110,000 performance-optimized rows**[cite: 1].
 6. **YoY Trend Analytics**: Generated a prior-year baseline dataset to enable Year-over-Year (YoY) comparative threat reporting[cite: 1].
 7. **Direct BI Integration**: Built an abstraction view on top of the materialized view to serve as a seamless, high-speed data source for Power BI[cite: 1].
 
@@ -93,7 +93,7 @@ By creating `Dim_NIST`[cite: 1], network anomalies are categorized against indus
 
 ## 💼 Business Impact & Value Delivered
 
-* **Query Performance Optimization**: Reducing 3.6 million records to 300 materialized summary rows reduced dashboard load time from seconds to near-instantaneous query rendering[cite: 1].
+* **Query Performance Optimization**: Reducing 3.6 million records to ~110,00 materialized summary rows reduced dashboard load time from seconds to near-instantaneous query rendering[cite: 1].
 * **Executive Accessibility**: Bridged technical SOC network security metrics with executive GRC compliance requirements using NIST mapping[cite: 1].
 * **Historical Trend Analysis**: Enabled comparative YoY security posture reporting for risk assessment and resource allocation[cite: 1].
 
