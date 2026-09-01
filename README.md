@@ -1,4 +1,4 @@
-# 🛡️ Enterprise Cyber Threat Analytics & GRC Dashboard (CIC-IDS2018) (In Progress expected to be completed by Aug 31 2026)
+# 🛡️ Enterprise Cyber Threat Analytics & GRC Dashboard (CIC-IDS2018) (In Progress)
 
 A high-performance Governance, Risk, and Compliance (GRC) data engineering and analytics solution. This project transforms raw intrusion detection flow logs into executive-ready security insights by mapping network attacks to the **NIST Cybersecurity Framework (CSF)** using PostgreSQL and Power BI.
 
